@@ -12,7 +12,7 @@ class AddBug extends React.Component {
     render() {
       return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <Text>Home!</Text>
+          <Text>Home / Add Bug</Text>
         </View>
       );
     }
@@ -41,7 +41,12 @@ class AddBug extends React.Component {
 const TabNavigator = createBottomTabNavigator({
   Home: AddBug,
   Guide: Guide,
-  Bugs: Bugs
+  Bugs: Bugs,
+}, {
+    initialRouteName: 'Home',
+    activeColor: "#f0edf6",
+    inactiveColor: '#3e2465',
+    barStyle: { backgroundColor: '#694fad' },
 });
 
 export default createAppContainer(TabNavigator);
